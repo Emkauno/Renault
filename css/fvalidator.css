@@ -1,0 +1,145 @@
+.field{
+	position: relative;
+}
+.field i{
+	position: absolute;
+	right: 10px;
+	top:14px;
+	display: none;
+}
+.fvalidator form{
+	width: 80%;
+	margin: 0 auto;
+}
+.fvalidator button, input, textarea{
+	position: relative;
+	-webkit-apprearance:none;
+	-moz-apprearance:none;
+	apprearance:none;
+	margin: 0;
+	padding:10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	width: 100%;
+	border:0px;
+	background-color: #fafafa;
+	-webkit-transition:background-color .3s, border-color .4s;
+	-moz-transition:background-color .3s, border-color .4s;
+	-o-transition:background-color .3s, border-color .4s;
+	transition:background-color .3s, border-color .4s;
+}
+.fvalidator textarea{
+	height: 100px;
+	resize:none;
+}
+
+.fvalidator input:focus, textarea:focus, input:hover, textarea:hover{
+	outline:none;
+}
+.fvalidator button{
+	display: block;
+	border: none;
+	background-color: #fdb515;
+	color: #000;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	padding: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+.fvalidator button:hover{
+	background-color: #ffcf64;
+}
+.fvalidator button:before,
+.fvalidator button:after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	line-height: 50px;
+	cursor: default;
+}
+
+/* --------------------------------------------------- */ 
+/*	Rolling button style compliments of CodDrops.com
+/* --------------------------------------------------- */ 
+.fvalidator button:after{
+	top:-100%;
+	content:attr(data-success);
+	background: #7aca7c;
+	color: #358337;
+	-webkit-transform-origin: 0% 100%;
+	-webkit-transform: rotateX(90deg);
+	-moz-transform-origin: 0% 100%;
+	-moz-transform: rotateX(90deg);
+	-ms-transform-origin: 0% 100%;
+	-ms-transform: rotateX(90deg);
+	transform-origin: 0% 100%;
+	transform: rotateX(90deg);
+}
+.fvalidator button:before{
+	top:100%;
+	background: #e96a6a;
+	color: #a33a3a;
+	content:attr(data-error);
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: rotateX(-90deg);
+	-ms-transform-origin: 0% 0%;
+	-ms-transform: rotateX(-90deg);
+	transform-origin: 0% 0%;
+	transform: rotateX(-90deg);
+}
+
+.fvalidator button.submit-success {
+	background: #aaa;
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform: rotateX(-90deg) translateY(100%);
+	-moz-transform-origin: 50% 100%;
+	-moz-transform: rotateX(-90deg) translateY(100%);
+	-ms-transform-origin: 50% 100%;
+	-ms-transform: rotateX(-90deg) translateY(100%);
+	transform-origin: 50% 100%;
+	transform: rotateX(-90deg) translateY(100%);
+}
+
+.fvalidator button.submit-error  {
+	background: #aaa;
+	-webkit-transform-origin: 50% 0%;
+	-webkit-transform: rotateX(90deg) translateY(-100%);
+	-moz-transform-origin: 50% 0%;
+	-moz-transform: rotateX(90deg) translateY(-100%);
+	-ms-transform-origin: 50% 0%;
+	-ms-transform: rotateX(90deg) translateY(-100%);
+	transform-origin: 50% 0%;
+	transform: rotateX(90deg) translateY(-100%);
+}
+
+/* --------------------------------------------------- */ 
+/*	Validation Styles
+/* --------------------------------------------------- */ 
+.fvalidator .success{
+	background-color: #EAFFF8;
+}
+.fvalidator .success+i{
+	color: #1C9D39;
+	display: block;
+}
+.fvalidator .error+i{
+	color: #B82020;
+	display: block;
+}
+.fvalidator .error{
+	background-color: #f5b5b5;
+	color: white;
+}
+.fvalidator input::placeholder {
+	color: #000;
+}
